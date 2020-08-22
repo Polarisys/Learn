@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <hello v-for="item in items" v-bind:thing="item"></hello>
+</div>
+
+
+<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+<script>
+
+    Vue.component("hello",{
+        props: ['thing'],
+       template: '<li>{{thing}}</li>'
+    });
+
+    // 实例化vue对象
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            items: ['java','linux','vue']
+        }
+    })
+</script>
+</body>
+</html>

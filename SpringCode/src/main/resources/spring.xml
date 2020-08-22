@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="testDao" class="com.spring.dao.TestDaoImpl"></bean>
+
+    <bean id="service" class="com.spring.service.TestServiceImpl" >
+        <property name="testDao" ref="testDao" ></property>
+
+    </bean>
+
+</beans>

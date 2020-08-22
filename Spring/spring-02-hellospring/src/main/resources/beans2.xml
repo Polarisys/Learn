@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        id：bean的唯一标识，也就是相当于对象名
+        class：bean的对象所对应的全限定名：包名+类型
+        name：也是别名，而且name可以同时取多个别名
+     -->
+    <bean id="hello" class="com.web.pojo.Hello" name="hello3,hello4">
+        <property name="name" value="Spring"></property>
+    </bean>
+
+    <alias name="hello" alias="hello2"></alias>
+</beans>
